@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Kevoree Keynote Showcase</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=1274, user-scalable=yes"/>
+	
+	<!-- Kevoree Keynote Theme -->
+    <link type="text/css" rel="stylesheet" href="css/reset/reset.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="css/print/print.css" media="print"/>
+    <link type="text/css" rel="stylesheet" href="css/screen/screen.css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="css/themes/default/default.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="css/themes/default/fonts.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="css/themes/default/default.print.css" media="print"/>
+    <link type="text/css" rel="stylesheet" href="css/themes/default/default.screen.css" media="screen"/>
+    <!-- Kevoree Keynote Framework -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/screenfull.min.js"></script>
+    <script type="text/javascript" src="js/keynote.js"></script>
+    <script type="text/javascript" src="js/plugins/slide.js"></script>
+    <script type="text/javascript" src="js/plugins/active.js"></script>
+    <script type="text/javascript" src="js/plugins/progress.js"></script>
+    <script type="text/javascript" src="js/plugins/keyboard.js"></script>
+    <script type="text/javascript" src="js/plugins/include.js"></script>
+    <script type="text/javascript" src="js/plugins/h2list.js"></script>
+    <script type="text/javascript" src="js/plugins/notes.js"></script>
+    <script type="text/javascript" src="js/plugins/slidecount.js"></script>
+    <script type="text/javascript" src="js/plugins/popup.js"></script>
+    <script type="text/javascript" src="js/plugins/websocket.js"></script>
+	<!-- Initialisation -->
+    <script type="text/javascript" id="keynote">
+        jQuery(document).ready(function () {
+            // the order the plugins are added defined the order of their initialization !!
+            var ks = new KSlideShow();
+            new IncludePlugin(ks);
+            new H2List(ks, 4);
+            new ProgressPlugin(ks);
+            new ActivePlugin(ks);
+            new KKeyboard(ks);
+            new SlidePlugin(ks);
+            ks.startKeynote();
+        });
+    </script>
+	
+</head>
+
+<body class="list">
+	
+<header class="caption">
+    <h1>Kevoree Keynote showcase</h1>
+    <p><a href="http://kevoree.org">Fouquet Francois / Erwan Daubert / Kevoree Team</a></p>
+</header>
+
+<section class="slide shout cover" id="Cover">
+    <header>
+        <h2>Kevoree Keynote</h2>
+    </header>
+    <details>Some content to the speaker</details>
+</section>
+
+<section class="slide">
+    <h2>HTML5 Slide framework</h2>
+    <p>Simply write content in HTML</p>
+    <p>Hightlight some <code>content</code></p>
+</section>
+
+<section class="slide" id="innerTest">
+    <h2>Next step</h2>
+    <p>You can add some incremental content with the <code>next</code> CSS class</p>
+    <ul>
+        <li class="next">First point</li>
+        <li class="next">Second idea !</li>
+        <li class="next">It also work recursively !
+            <ul>
+                <li class="next">sub idea 1</li>
+            </ul>
+        </li>
+        <li class="next">It is also possible to hide the bubble
+            <ul>
+                <li class="next hidden">without bubble</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="next">It work also for P element</p>
+    <details>Some content for speaker (not display)</details>
+</section>
+
+<section class="slide" id="ol">
+    <h2>Next step</h2>
+    <p>Incremental content can be numbered too using <code>ol</code> tag instead of <code>ul</code></p>
+    <ol>
+        <li class="next">first number</li>
+        <li class="next">second number</li>
+    </ol>
+</section>
+
+<section class="slide" id="image1">
+    <h2>Image is good for comprehension</h2>
+    <img src="figures/kevoree-logo.png"/>
+</section>
+
+<section class="slide" id="image2">
+    <h2>You can also add image incrementally</h2>
+    <img class="next" src="figures/kevoree-logo.png" width="300px"/>
+    <img class="next" src="figures/kevoree-logo.png" width="300px"/>
+    <img class="next" src="figures/kevoree-logo.png" width="300px"/>
+    <img class="next" src="figures/kevoree-logo.png" width="300px"/>
+</section>
+
+<section class="slide" id="image3">
+    <h2>You can also add image incrementally</h2>
+    <p>
+        <span>And mix image</span>
+        <img class="next" src="figures/kevoree-logo.png" width="300px"/>
+        and text !
+    </p>
+</section>
+
+<section class="slide shout">
+    <h2>Wake up !</h2>
+</section>
+
+<div id="include" class="includeHtml"></div>
+
+<section class="slide shout">
+    <h2 class="h2-list">A new h2-list shout</h2>
+</section>
+
+
+<section class="slide shout">
+    <h2 class="h2-list">A new shout 1</h2>
+</section>
+
+<section class="slide shout">
+    <h2 class="h2-list">A new shout 2</h2>
+</section>
+
+<section class="slide shout">
+    <h2 class="h2-list">A new shout 3</h2>
+</section>
+
+<section class="slide shout">
+    <h2 class="h2-list">One more thing !</h2>
+</section>
+
+<section class="slide" id="Anim1">
+    <header>
+        <h2>Extend by yourself</h2>
+    </header>
+    <p>Using javascript on specific events:</p>
+    <ul>
+        <li class="hidden"><code>active</code>, <code>currentActive</code>, <code>notCurrentActive</code>, <code>notActive</code></li>
+    </ul>
+    <img class="next" src="figures/kevoree-logo.png" width="300px" id="animImg1"/>
+
+    <div class="next" id="divBackground1">
+        Some information
+    </div>
+    <div class="next" id="divBackground2">
+        Some other info
+    </div>
+    <div class="next" id="divBackground3">
+        Some not used info
+    </div>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(document.body).on("list", function () {
+                jQuery("#divBackground1").css("background-color", "transparent");
+                jQuery("#divBackground2").css("background-color", "transparent");
+            });
+            jQuery("#animImg1").on('active', function () {
+                jQuery("#animImg1").css("background-color", "blue");
+            });
+            jQuery("#divBackground1").on('active', function () {
+                jQuery("#divBackground1").css("background-color", "blue");
+            });
+            var divBackground2 = jQuery("#divBackground2");
+            divBackground2.on('currentActive', function () {
+                jQuery("#divBackground2").css("background-color", "red");
+            });
+            divBackground2.on('notCurrentActive', function () {
+                jQuery("#divBackground2").css("background-color", "green");
+            });
+        });
+    </script>
+</section>
+
+<section class="slide shout">
+    <h2>Play !</h2>
+</section>
+
+</body>
+</html>
