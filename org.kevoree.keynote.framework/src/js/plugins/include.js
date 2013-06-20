@@ -36,4 +36,5 @@ function IncludePlugin(kslide) {
         kslide.getUrl().hash = '';
         kslide.getUrl().hash = anchor;
     });
+
 }

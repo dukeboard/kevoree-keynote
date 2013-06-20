@@ -8,11 +8,35 @@
 
     <fileSets>
         <fileSet>
-            <directory>target/org.kevoree.keynote.framework-1.0.0-SNAPSHOT/js</directory>
-            <outputDirectory></outputDirectory>
+            <directory>target/js</directory>
+            <outputDirectory>keynote/</outputDirectory>
             <includes>
                 <include>*.min.js</include>
             </includes>
         </fileSet>
+
+        <fileSet>
+            <directory>target/css</directory>
+            <outputDirectory>keynote</outputDirectory>
+            <includes>
+                <include>*.min.css</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>src/css/themes/default/fonts</directory>
+            <outputDirectory>keynote/fonts</outputDirectory>
+            <includes>
+                <include>PT*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/css/themes/default/images</directory>
+            <outputDirectory>keynote/images</outputDirectory>
+            <includes>
+                <include>*.png</include>
+            </includes>
+        </fileSet>
+
     </fileSets>
 </assembly>

@@ -29,6 +29,7 @@
                         <phase>process-resources</phase>
                         <configuration>
                             <webappSourceDir>${basedir}/src</webappSourceDir>
+                            <webappTargetDir>${build.directory}</webappTargetDir>
                             <jsSourceFiles>
                                 <jsSourceFile>jquery-1.10.1.min.js</jsSourceFile>
                                 <jsSourceFile>screenfull.min.js</jsSourceFile>
@@ -53,23 +54,21 @@
                             <goal>minify</goal>
                         </goals>
                     </execution>
-                    <!--
                     <execution>
                         <id>minify-theme-default-print-css</id>
                         <phase>generate-resources</phase>
                         <configuration>
-                            <webappSourceDir>${project.basedir}/src/main/resources/styles/themes/default</webappSourceDir>
-                            <webappTargetDir>${project.basedir}/src/main/resources/styles/themes/default</webappTargetDir>
-                            <cssSourceDir>.</cssSourceDir>
+                            <webappSourceDir>${basedir}/src</webappSourceDir>
+                            <webappTargetDir>${build.directory}</webappTargetDir>
+                            <cssSourceDir>css</cssSourceDir>
                             <cssSourceFiles>
-                                <cssSourceFile>../../reset/reset.css</cssSourceFile>
-                                <cssSourceFile>../../print/print.css</cssSourceFile>
-                                <cssSourceFile>default.css</cssSourceFile>
-                                <cssSourceFile>fonts.css</cssSourceFile>
-                                <cssSourceFile>default.print.css</cssSourceFile>
+                                <cssSourceFile>reset.css</cssSourceFile>
+                                <cssSourceFile>print.css</cssSourceFile>
+                                <cssSourceFile>themes/default/default.css</cssSourceFile>
+                                <cssSourceFile>themes/fonts.css</cssSourceFile>
+                                <cssSourceFile>themes/default/default.print.css</cssSourceFile>
                             </cssSourceFiles>
-                            <cssTargetDir>.</cssTargetDir>
-                            <cssFinalFile>default.print.merged.css</cssFinalFile>
+                            <cssFinalFile>default.print.css</cssFinalFile>
                         </configuration>
                         <goals>
                             <goal>minify</goal>
@@ -79,23 +78,22 @@
                         <id>minify-theme-default-screen-css</id>
                         <phase>generate-resources</phase>
                         <configuration>
-                            <webappSourceDir>${project.basedir}/src/main/resources/styles/themes/default</webappSourceDir>
-                            <webappTargetDir>${project.basedir}/src/main/resources/styles/themes/default</webappTargetDir>
-                            <cssSourceDir>.</cssSourceDir>
+                            <webappSourceDir>${basedir}/src</webappSourceDir>
+                            <webappTargetDir>${build.directory}</webappTargetDir>
+                            <cssSourceDir>css</cssSourceDir>
                             <cssSourceFiles>
-                                <cssSourceFile>../../reset/reset.css</cssSourceFile>
-                                <cssSourceFile>../../screen/screen.css</cssSourceFile>
-                                <cssSourceFile>default.css</cssSourceFile>
-                                <cssSourceFile>fonts.css</cssSourceFile>
-                                <cssSourceFile>default.screen.css</cssSourceFile>
+                                <cssSourceFile>reset.css</cssSourceFile>
+                                <cssSourceFile>screen.css</cssSourceFile>
+                                <cssSourceFile>themes/default/default.css</cssSourceFile>
+                                <cssSourceFile>themes/fonts.css</cssSourceFile>
+                                <cssSourceFile>themes/default/default.screen.css</cssSourceFile>
                             </cssSourceFiles>
-                            <cssTargetDir>.</cssTargetDir>
-                            <cssFinalFile>default.screen.merged.css</cssFinalFile>
+                            <cssFinalFile>default.screen.css</cssFinalFile>
                         </configuration>
                         <goals>
                             <goal>minify</goal>
                         </goals>
-                    </execution>-->
+                    </execution>
                 </executions>
             </plugin>
 
